@@ -47,6 +47,6 @@ export class ApiMock {
   }
 
   stop () {
-    this.nock.clearAll()
+    Nock.restore()
   }
 }

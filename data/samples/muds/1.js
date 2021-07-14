@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 
-const motd = fs.readFileSync('./data/samples/muds/1.motd.txt', 'utf8')
+const motd = fs.readFileSync(new URL('./1.motd.txt', import.meta.url), 'utf8')
 
 const mud1 = {
   id: 1,
