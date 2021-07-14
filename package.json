@@ -7,7 +7,8 @@
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
     "test:ci": "NODE_ENV=test mocha",
-    "lint": "standardx --fix"
+    "lint": "standardx --fix",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "c8": "7.7.3",
     "chai": "4.3.4",
     "mocha": "9.0.2",
+    "release-it": "14.10.0",
     "standardx": "7.0.0"
   },
   "standardx": {
@@ -58,6 +60,20 @@
       "index.js",
       "src"
     ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}",
+      "tagAnnotation": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "releaseName": "v${version}",
+      "preRelease": true
+    },
+    "npm": {
+      "publish": false
+    }
   },
   "engines": {
     "node": ">= 14"
