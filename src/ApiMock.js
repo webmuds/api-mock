@@ -11,11 +11,11 @@ import characters from '../data/samples/characters.js'
 
 export class ApiMock {
   constructor (url) {
-    this.load(url)
+    this.url = url
   }
 
-  load (url) {
-    var api = Nock(url).persist()
+  start () {
+    const api = Nock(this.url).persist()
     this.nock = api
 
     api.get('/servers/1').reply(200, servers.get(1))
@@ -44,6 +44,11 @@ export class ApiMock {
     api.post('/muds/1/characters/5/server_authorize', { token: characters.get(5).login_key }).reply(200, characters.get(5))
     api.post('/muds/1/characters/6/server_authorize', { token: characters.get(6).login_key }).reply(200, characters.get(6))
     api.post('/muds/:mud_id/characters/:character_id/server_authorize', body => body.token).reply(401) // any other token
+
+    // This allows Nock to restart if it has been #restore()'d.
+    if (!Nock.isActive()) {
+      Nock.activate()
+    }
   }
 
   stop () {

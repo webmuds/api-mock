@@ -3,7 +3,7 @@
 import mud1 from './muds/1.js'
 import mud2 from './muds/2.js'
 
-var muds = new Map()
+const muds = new Map()
 muds.set(mud1.id, mud1)
 muds.set(mud2.id, mud2)
 

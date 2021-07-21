@@ -8,7 +8,7 @@
     "test": "npm run lint && NODE_ENV=test c8 mocha",
     "test:ci": "NODE_ENV=test mocha",
     "lint": "standardx --fix",
-    "release": "release-it"
+    "release": "release-it --config ./node_modules/@webmuds/development/config/release-it/config.js"
   },
   "repository": {
     "type": "git",
@@ -24,30 +24,15 @@
     "nock": "13.1.1"
   },
   "devDependencies": {
-    "@babel/core": "7.14.6",
-    "@babel/eslint-parser": "7.14.7",
-    "@types/chai": "4.2.21",
-    "@types/mocha": "8.2.3",
-    "@types/node": "16.3.1",
     "@webmuds/api-client": "github:webmuds/api-client#0.1.3",
-    "c8": "7.7.3",
-    "chai": "4.3.4",
-    "mocha": "9.0.2",
-    "release-it": "14.10.0",
-    "standardx": "7.0.0"
+    "@webmuds/development": "github:webmuds/development#0.1.1",
+    "release-it": "14.10.0"
   },
-  "standardx": {
-    "env": "mocha",
-    "parser": "@babel/eslint-parser"
+  "babel": {
+    "extends": "./node_modules/@webmuds/development/config/babel"
   },
-  "babel": {},
   "eslintConfig": {
-    "rules": {
-      "no-var": 0,
-      "prefer-const": 0,
-      "no-unused-expressions": 0,
-      "no-unused-vars": 0
-    }
+    "extends": "./node_modules/@webmuds/development/config/eslint"
   },
   "mocha": {
     "recursive": true,
@@ -60,20 +45,6 @@
       "index.js",
       "src"
     ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release v${version}",
-      "tagAnnotation": "v${version}"
-    },
-    "github": {
-      "release": true,
-      "releaseName": "v${version}",
-      "preRelease": true
-    },
-    "npm": {
-      "publish": false
-    }
   },
   "engines": {
     "node": ">= 14"

@@ -11,7 +11,7 @@ import room8 from './rooms/8.js'
 import room9 from './rooms/9.js'
 import room10 from './rooms/10.js'
 
-var rooms = new Map()
+const rooms = new Map()
 rooms.set(room1.id, room1)
 rooms.set(room2.id, room2)
 rooms.set(room3.id, room3)

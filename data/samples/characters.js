@@ -7,7 +7,7 @@ import character4 from './characters/4.js'
 import character5 from './characters/5.js'
 import character6 from './characters/6.js'
 
-var characters = new Map()
+const characters = new Map()
 characters.set(character1.id, character1)
 characters.set(character2.id, character2)
 characters.set(character3.id, character3)
