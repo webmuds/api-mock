@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/webmuds/api-mock#readme",
   "dependencies": {
-    "nock": "13.1.1"
+    "nock": "13.1.3"
   },
   "devDependencies": {
     "@webmuds/api-client": "github:webmuds/api-client#0.1.3",
