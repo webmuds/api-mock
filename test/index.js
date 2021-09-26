@@ -1,6 +1,6 @@
 'use strict'
 
-import { expect } from '@webmuds/development'
+import { expect } from '@dimensionalpocket/development'
 import { ApiMock as ApiMockFromSrc } from '../src/ApiMock.js'
 import ApiMock from '../index.js'
 import ApiClient from '@webmuds/api-client'
