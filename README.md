@@ -1,5 +1,7 @@
 # @webmuds/api-mock
 
+[![build](https://github.com/webmuds/api-mock/actions/workflows/node.js.yml/badge.svg)](https://github.com/webmuds/api-mock/actions/workflows/node.js.yml)
+
 ## Usage
 
 ```javascript
