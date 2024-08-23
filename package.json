@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/webmuds/api-mock#readme",
   "dependencies": {
-    "nock": "13.5.4"
+    "nock": "13.5.5"
   },
   "devDependencies": {
     "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.7.0",
